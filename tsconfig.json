@@ -8,8 +8,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
-    "sourceMap": false,
-    "declaration": false,
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "importHelpers": true,

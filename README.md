@@ -1,3 +1,3 @@
 # Express Study
 
-A study of Express, Typescript, Vite.
+A study of Express, Typescript, esbuild.
