@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/tsc",
+    "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -17,8 +17,6 @@
     "lib": [
       "ES2022"
     ]
-  },
-  "files": [
-    "src/app.ts"
-  ]
+  }
 }
+

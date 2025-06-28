@@ -1,0 +1,7 @@
+{
+  "name": "@granito/express-study",
+  "version": "1.0.0-SNAPSHOT.0",
+  "main": "./index.cjs",
+  "types": "./index.d.ts",
+  "dependencies": {}
+}
