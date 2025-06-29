@@ -1,7 +1,10 @@
 {
   "name": "@granito/express-study",
   "version": "1.0.0-SNAPSHOT.0",
-  "main": "./index.cjs",
-  "types": "./index.d.ts",
+  "main": "./index.js",
+  "types": "./src/index.d.ts",
+  "bin": {
+    "express-study": "./index.js"
+  },
   "dependencies": {}
 }

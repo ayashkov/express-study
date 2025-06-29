@@ -1,18 +1,23 @@
 {
-  "name": "@granito/express-study",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "@granito/express-study",
   "sourceRoot": "packages/express-study/src",
   "projectType": "application",
   "targets": {
     "build": {
+      "dependsOn": ["typecheck"],
       "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/express-study",
-        "main": "packages/express-study/src/main.ts",
+        "main": "packages/express-study/src/index.ts",
         "tsConfig": "packages/express-study/tsconfig.app.json",
         "assets": ["packages/express-study/*.md"],
-        "format": ["cjs"],
+        "platform": "node",
+        "format": ["esm"],
+        "bundle": true,
+        "minify": true,
+        "sourcemap": true,
         "generatePackageJson": true
       }
     }

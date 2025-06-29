@@ -1,3 +1,4 @@
+#!/bin/env node
 import express, { Request, Response } from 'express';
 import { PORT } from './config';
 

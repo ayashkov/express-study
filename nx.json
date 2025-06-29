@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "tui": {
+    "enabled": false
+  },
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
@@ -9,7 +12,7 @@
         },
         "build": {
           "targetName": "build",
-          "configName": "tsconfig.json"
+          "configName": "tsconfig.app.json"
         }
       }
     }
@@ -18,7 +21,10 @@
     "@nx/esbuild:esbuild": {
       "cache": true,
       "dependsOn": ["^build"],
-      "inputs": ["default", "^default"]
+      "inputs": [
+        "default",
+        "^default"
+      ]
     }
   }
 }
