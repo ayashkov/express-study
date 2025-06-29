@@ -8,17 +8,47 @@
       "dependsOn": ["typecheck"],
       "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/packages/express-study",
-        "main": "packages/express-study/src/index.ts",
-        "tsConfig": "packages/express-study/tsconfig.app.json",
-        "assets": ["packages/express-study/*.md"],
         "platform": "node",
-        "format": ["esm"],
+        "format": ["cjs"],
         "bundle": true,
-        "minify": true,
         "sourcemap": true,
-        "generatePackageJson": true
+        "tsConfig": "packages/express-study/tsconfig.app.json",
+        "main": "packages/express-study/src/index.ts",
+        "assets": ["packages/express-study/*.md"],
+        "outputPath": "dist/packages/express-study",
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "sourcemap": false,
+          "minify": true
+        }
+      }
+    },
+    "serve": {
+      "dependsOn": ["build"],
+      "executor": "@nx/js:node",
+      "continuous": true,
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "@granito/express-study:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "@granito/express-study:build:development"
+        },
+        "production": {
+          "buildTarget": "@granito/express-study:build:production"
+        }
       }
     }
   }

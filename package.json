@@ -29,6 +29,7 @@
   "devDependencies": {
     "@nx/esbuild": "21.2.1",
     "@nx/js": "^21.2.1",
+    "@nx/node": "^21.2.1",
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.4",
     "esbuild": "^0.25.5",
