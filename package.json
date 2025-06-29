@@ -1,5 +1,6 @@
 {
-  "name": "express-study",
+  "name": "@granito/source",
+  "private": true,
   "version": "1.0.0-SNAPSHOT.0",
   "description": "A study of Express, Typescript, Nx, esbuild.",
   "repository": {
