@@ -1,6 +1,13 @@
 {
   "name": "Nx",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+  "mounts": [
+    {
+      "source": "home",
+      "target": "/home/node",
+      "type": "volume"
+    }
+  ],
   "customizations": {
     "vscode": {
       "settings": {},
